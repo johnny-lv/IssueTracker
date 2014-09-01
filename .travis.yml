@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '0.10'
+notifications:
+  email:
+    - kkiiiu@gmail.com
+before_script:
+  - npm install -g grunt-cli
+  - npm install spm -g
+  - npm install spm build -g
+script:
+  - make build
+branches:
+  only:
+    - master
