@@ -10,9 +10,11 @@ define(function(require, exports, module) {
 
         model: new issueModel(),
 
-        template: _.template("<%=Bug_No%><p><%=Category%><p><%=Root_Cause%><p><%=Resolution%><p><%=Tag%>"),
+        //template: _.template("<%=Bug_No%><p><%=Category%><p><%=Root_Cause%><p><%=Resolution%><p><%=Tag%>"),
+        template: _.template($("templates/issue-view.html").html()),
 
         render: function() {
+            alert(this.template.html);
             this.$el.html(this.template(this.model.toJSON()));
             return this;
         },
